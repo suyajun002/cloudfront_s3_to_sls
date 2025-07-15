@@ -24,3 +24,8 @@ run.py  #主程序
 sync_s3.py #从s3上同步日志文件
 utils.py   #日记模块
 ```
+- 运行方式
+```
+crontab -l
+*/5 * * * * cd /data/apps/cloudfront_s3_to_sls;/root/anaconda3/bin/python3 run.py >> run.log 2>&1
+```
